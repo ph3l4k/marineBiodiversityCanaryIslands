@@ -1,0 +1,148 @@
+/* Variables
+   ========================================================================== */
+:root{
+  /* Colour Palette */
+  --var-black-color:black;
+  --var-yellow-color:#f4f759;
+  --var-green-color:#40b33f;
+  --var-red-color:red;
+
+  /* Sizes box */
+  --var-border-radius: 5px;
+
+}
+
+/* Generals
+   ========================================================================== */  
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Verdana, Tahoma, sans-serif;
+  max-width: 1600px;
+  width: 100%;
+  margin: 0px auto;
+  padding: 0px;
+}
+
+img {
+  width: 40%;
+  padding: 10px;
+  box-shadow: 2px 2px 2px var(--var-black-color);
+  border-radius: var(--var-border-radius);
+}
+
+/* Header
+   ========================================================================== */
+header {
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.3),
+      rgba(255, 255, 255, 0.3)
+    ),
+    fixed url("../images/fondoHeader.png");
+  background-size: 100% 60%;
+  height: 25vh;
+  display: flex;
+}
+
+.menu {
+  width: 100%;
+  padding: 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+
+.menu>h1>abbr{
+  text-decoration: none;
+}
+
+.menuLinks * {
+  display: inline-block;
+  list-style-type: none;
+  padding: 0 5px;
+}
+
+.menuLinks a {
+  color: var(--var-black-color);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.menuLinks a:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: var(--var-yellow-color);
+  transition: width 1.5s;
+}
+
+.menuLinks a:hover::after {
+  width: 100%;
+}
+
+/* Main
+   ========================================================================== */
+main{
+    padding: 5%;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+main *{
+  padding: 5px;
+}
+
+main>div{
+  padding: 3%;
+  border-radius: var(--var-border-radius);
+  border: 2px solid var(--var-black-color);
+}
+
+main>div>h2{
+  text-align: center;
+  background-color: var(--var-yellow-color);
+  border-radius: var(--var-border-radius);
+}
+
+/* getOptionsUser - left Div
+   ========================================================================== */
+.getOptionsUser{
+  width: 49%;
+  float: left;
+}
+
+.getOptionsUser:hover{
+  border: 2px solid var(--var-green-color);
+}
+
+.filters{
+  display: flex;
+  flex-direction: column;
+}
+
+/* showRequestsUser - right Div
+   ========================================================================== */
+.showRequestsUser{
+  width: 49%;
+  float: left;
+}
+
+.showRequestsUser:hover{
+  border: 2px solid var(--var-green-color);
+}
+
+/* Footer
+   ========================================================================== */
+footer{
+  font-weight: 600;
+  border-top: 2px solid black;
+  padding-top: 5vh;
+  margin: 2em auto;
+  text-align: center;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Open Data Ocean Biodiversity Canary Islands</title>
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/jquery-ui.theme.css">
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shorcut icon" href="images/icon.png">
+
+    <!-- Scripts -->
+    <script src="js/jquery-3.5.1.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/datosInicio.js"></script>
+    <script type="module" src="js/optionsUser.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <nav class="menu">
+        <div>
+          <a href="#"><img src="images/logoObis.png" alt="Logo de OBIS" /></a>
+        </div>
+        <h1><abbr title="Biodiversidad marina en la Lista Roja de las Islas Canarias">Biomar Rojo Canarias</abbr></h1>
+        <ul class="menuLinks">
+          <li><a href="#">Inicio</a></li>
+          <li><a href="https://api.obis.org/" target="_blank">API OBIS</a></li>
+          <li>
+            <a href="https://github.com/ph3l4k/obisOpenDataMarineBiodiversityCanaryIslands" target="_blank">Github Proyecto</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="getOptionsUser"><!-- Area para pedir los filtros de los datos -->
+        <h2>¿Qué es la lista roja?</h2>
+        <div class="redList">
+          <br />
+          <p>La Lista Roja de Especies Amenazadas de la UICN​, ​ creada en 1963, es el inventario más completo del estado de conservación de especies de animales y plantas a nivel mundial. La lista es elaborada por la Unión Internacional para la Conservación de la Naturaleza, la principal autoridad mundial en la materia.</p>
+          <br />
+          <p>Más información: <a href="https://www.iucnredlist.org/es/" target="_blank" rel="noopener noreferrer">Lista Roja IUCN</a></p>
+          <br>
+          <p>En esta web en primera instancia trabajaremos solo con los animales marinos de la biodiversidad marina de las Islas Canarias a traves de la API de <abbr title="Ocean Biodiversity Information System">OBIS</abbr> que estan recogidos en la lista roja.</p>
+        </div>
+        <h2>Filtros</h2>
+        <div class="filters">
+          <label for="date"
+            >Selecione un año: <br>
+            <select name="year" id="dateSlt">
+              <option value="0" selected>Todos</option>
+            </select>
+          </label>
+          <label for="scientificName"
+            >Seleccione un nombre científico: <br>
+            <select name="scientificName" id="scientificNameSlt">
+              <option value="0" selected>Todos</option>
+            </select>
+          </label>
+        </div>
+        <input type="submit" value="Enviar" id="enviarBtn"/>
+      </div>
+
+      <div class="showRequestsUser"><!-- Area pa mostrar los datos -->
+        <h2>Datos</h2>
+        <div id="datos"></div><!-- Donde se van a mostrar los datos tras la peticion del usuario -->
+      </div>
+    </main>
+    
+    <footer>
+      <div>&copy; Copyright: Pablo Sánchez Pérez - DWEC</div>
+    </footer>
+  </body>
+</html>
